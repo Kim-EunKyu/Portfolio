@@ -100,12 +100,21 @@ p {
 
 /* Navbar */
 #navbar {
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: transparent;
   align-items: center;
-  color: var(--color-white);
   padding: 16px;
+  color: var(--color-white);
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 1; /* z축의 우선순위를 정하는 속성. 안해줄 경우 가끔 이미지같은 것이 위로 올라 올때가 있었다.*/
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-pink);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -115,6 +124,7 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: var(--color-white);
 }
 
 .navbar__menu__item {
@@ -146,6 +156,7 @@ p {
 #home {
   background: url("imgs/home_background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
