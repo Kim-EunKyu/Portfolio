@@ -11,6 +11,13 @@ document.addEventListener("scroll", () => {
   }
 });
 
+//home의 투명도를 조절하여 스크롤을 할 때 점점 투명하게 만들기.
+const home = document.querySelector(".home__container");
+const homeheight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeheight;
+});
+
 //Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", () => {
