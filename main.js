@@ -50,3 +50,54 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+//프로젝트 버튼 누르면 분류해주는 코드
+const workProject = document.querySelector(".work__projects");
+const kindofProject = document.querySelectorAll(".category__btn");
+for (let i = 0; i < kindofProject.length; i++) {
+  kindofProject[i].addEventListener("click", () => {
+    const target = event.target;
+    const select = target.dataset.select;
+    if (select == null) {
+      return;
+    }
+    workProject.classList.add("invisible");
+    setTimeout(() => {
+      classifyProject(select);
+      workProject.classList.remove("invisible");
+    }, 300);
+  });
+}
+
+function classifyProject(select) {
+  const project = document.querySelectorAll(".project");
+  if (select == "all") {
+    for (let i = 0; i < project.length; i++) {
+      if (project[i].nodeName == "A") {
+        project[i].style.display = "flex";
+      }
+    }
+  } else if (select == "front-only") {
+    for (let i = 0; i < project.length; i++) {
+      if (
+        project[i].nodeName == "A" &&
+        project[i].dataset.kindof == "front-end"
+      ) {
+        project[i].style.display = "flex";
+      } else {
+        project[i].style.display = "none";
+      }
+    }
+  } else if (select == "back-only") {
+    for (let i = 0; i < project.length; i++) {
+      if (
+        project[i].nodeName == "A" &&
+        project[i].dataset.kindof == "back-end"
+      ) {
+        project[i].style.display = "flex";
+      } else {
+        project[i].style.display = "none";
+      }
+    }
+  }
+}
