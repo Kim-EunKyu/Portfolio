@@ -11,11 +11,22 @@ document.addEventListener("scroll", () => {
   }
 });
 
-//home의 투명도를 조절하여 스크롤을 할 때 점점 투명하게 만들기.
+//home의 투명도를 조절하여 스크롤을 할 때 점점 투명하게 만들기. 그리고 arrowup 나타나게 하기.
 const home = document.querySelector(".home__container");
-const homeheight = home.getBoundingClientRect().height;
+const arrowup = document.querySelector(".arrowup");
+const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
-  home.style.opacity = 1 - window.scrollY / homeheight;
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+  if (window.scrollY > homeHeight) {
+    arrowup.classList.add("visible");
+  } else {
+    arrowup.classList.remove("visible");
+  }
+});
+
+//arrowup버튼 누르면 맨 위로 올라가기
+arrowup.addEventListener("click", () => {
+  scrollIntoView("#home");
 });
 
 //Handle scrolling when tapping on the navbar menu

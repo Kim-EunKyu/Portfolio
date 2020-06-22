@@ -439,6 +439,22 @@ p {
   transition: all var(--animation-duration) ease-in;
 }
 
+.arrowup {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 250%;
+  color: var(--color-dark-grey);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--animation-duration) ease-in;
+}
+
+.arrowup.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
     display: block;
