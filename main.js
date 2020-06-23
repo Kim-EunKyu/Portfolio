@@ -55,12 +55,19 @@ function scrollIntoView(selector) {
 const workProject = document.querySelector(".work__projects");
 const kindofProject = document.querySelectorAll(".category__btn");
 for (let i = 0; i < kindofProject.length; i++) {
-  kindofProject[i].addEventListener("click", () => {
-    const target = event.target;
-    const select = target.dataset.select;
+  kindofProject[i].addEventListener("click", (e) => {
+    const select =
+      e.target.dataset.select || e.target.parentNode.dataset.select;
     if (select == null) {
       return;
     }
+
+    const active = document.querySelector(".category__btn.selected");
+    active.classList.remove("selected");
+    const target =
+      e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+    target.classList.add("selected");
+
     workProject.classList.add("invisible");
     setTimeout(() => {
       classifyProject(select);
