@@ -38,12 +38,13 @@ navbarMenu.addEventListener("click", () => {
     return;
   }
 
+  navbarMenu.classList.toggle("open");
   scrollIntoView(link);
 });
 
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 navbarToggleBtn.addEventListener("click", () => {
-  navbarMenu.classList.toggle("visible");
+  navbarMenu.classList.toggle("open");
 });
 
 const homeContact = document.querySelector(".home__contact");
@@ -54,7 +55,6 @@ homeContact.addEventListener("click", () => {
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
-  navbarMenu.classList.toggle("visible");
 }
 
 //프로젝트 버튼 누르면 분류해주는 코드
