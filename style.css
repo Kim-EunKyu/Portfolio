@@ -188,6 +188,7 @@ p {
 .section {
   text-align: center;
   padding: 50px;
+  padding-top: 70px;
   margin: 0 auto;
 }
 
@@ -292,6 +293,8 @@ p {
 .skill__description {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 4px;
+  margin-top: 4px;
 }
 
 .skill__bar {
