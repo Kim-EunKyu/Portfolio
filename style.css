@@ -198,6 +198,10 @@ p {
 }
 
 /* About */
+.introduce p {
+  line-height: 40px;
+}
+
 .about__majors {
   display: flex;
   justify-content: space-around;
