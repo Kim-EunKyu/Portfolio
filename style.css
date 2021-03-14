@@ -294,7 +294,23 @@ p {
   margin-bottom: 8px;
 }
 
-.skill__description {
+.skill__mine {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skill__logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill__logo img {
+  width: 100px;
+  height: 100px;
+}
+
+/* .skill__description {
   display: flex;
   justify-content: space-between;
   margin-bottom: 4px;
@@ -310,7 +326,7 @@ p {
   width: 100%;
   height: 3px;
   background-color: var(--color-orange);
-}
+} */
 
 .skillset__right {
   flex-basis: 40%;
