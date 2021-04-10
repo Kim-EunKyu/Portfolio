@@ -71,7 +71,7 @@
           그래서 제 좌우명인 Stay hungry, Stay foolish라는 말처럼 항상 끊임없이
           배우는 개발자가 되고싶습니다.
         </p>
-        <p>이제 막 웹의 세계로 들어섰지만 꾸준한 모습으로 노력하겠습니다.</p>
+        <p>꾸준한 모습으로 항상 노력하겠습니다.</p>
       </div>
       <div class="about__majors">
         <div class="major">
@@ -87,6 +87,13 @@
           </div>
           <h2 class="major__title">Back-end</h2>
           <div class="major__description">Node.js</div>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h2 class="major__title">Mobile</h2>
+          <div class="major__description">React Native</div>
         </div>
       </div>
       <div class="about__jobs">
@@ -127,6 +134,13 @@
                 <div class="skill__logo">
                   <img src="imgs/skills/fe/React.svg" alt="React" />
                   <span>React</span>
+                </div>
+                <div class="skill__logo">
+                  <img
+                    src="imgs/skills/mobile/react-native-logo.png"
+                    alt="ReactNative"
+                  />
+                  <span>React Native</span>
                 </div>
                 <div class="skill__logo">
                   <img src="imgs/skills/be/node-js.png" alt="NodeJS" />
@@ -203,7 +217,7 @@
         <h3>Projects</h3>
         <div class="work__categories">
           <button class="category__btn selected" data-select="all">
-            All <span class="category__count">6</span>
+            All <span class="category__count">7</span>
           </button>
           <button class="category__btn" data-select="front-only">
             Front-end <span class="category__count">4</span>
@@ -211,9 +225,76 @@
           <button class="category__btn" data-select="back-only">
             Back-end <span class="category__count">2</span>
           </button>
+          <button class="category__btn" data-select="mobile-only">
+            Mobile <span class="category__count">1</span>
+          </button>
         </div>
 
         <div class="work__projects">
+          <a
+            href="https://github.com/Kim-EunKyu/skyShop"
+            class="project"
+            target="blank"
+            data-kindof="front-end"
+          >
+            <img
+              src="imgs/projects/skypia/skypia_mainpage.JPG"
+              alt="Shopping Mall Site"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Skypia with React</h3>
+              <span>React & Express.js를 이용하여 만든 쇼핑물 웹사이트</span>
+            </div>
+          </a>
+          <a
+            href="https://www.notion.so/eb317aced2c347d583dae3adaa4e6e05"
+            class="project"
+            target="blank"
+            data-kindof="mobile"
+          >
+            <img
+              src="imgs/projects/EnConversation.png"
+              alt="영어 회화 연습 어플"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>영어 회화 연습</h3>
+              <span>React Native를 이용하여 만든 영어 회화 연습 어플</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/Kim-EunKyu/WebBoardSite"
+            class="project"
+            target="blank"
+            data-kindof="back-end"
+          >
+            <img
+              src="imgs/projects/WebBoardSite_on_Desktop.png"
+              alt="WebBoard Site"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>WebBoard Site</h3>
+              <span>게시판이 있는 웹사이트</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/Kim-EunKyu/SafeDoor"
+            class="project"
+            target="blank"
+            data-kindof="back-end"
+          >
+            <img
+              src="imgs/projects/SafeDoor.png"
+              alt="SafeDoor"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>SafeDoor</h3>
+              <span>Remote Door Lock Control</span>
+            </div>
+          </a>
           <a
             href="https://github.com/Kim-EunKyu/Youtube_CloneCoding_Project"
             class="project"
@@ -247,38 +328,6 @@
             </div>
           </a>
           <a
-            href="https://github.com/Kim-EunKyu/SafeDoor"
-            class="project"
-            target="blank"
-            data-kindof="back-end"
-          >
-            <img
-              src="imgs/projects/SafeDoor.png"
-              alt="SafeDoor"
-              class="project__img"
-            />
-            <div class="project__description">
-              <h3>SafeDoor</h3>
-              <span>Remote Door Lock Control</span>
-            </div>
-          </a>
-          <a
-            href="https://github.com/Kim-EunKyu/WebBoardSite"
-            class="project"
-            target="blank"
-            data-kindof="back-end"
-          >
-            <img
-              src="imgs/projects/WebBoardSite_on_Desktop.png"
-              alt="WebBoard Site"
-              class="project__img"
-            />
-            <div class="project__description">
-              <h3>WebBoard Site</h3>
-              <span>게시판이 있는 웹사이트</span>
-            </div>
-          </a>
-          <a
             href="https://github.com/Kim-EunKyu/mapexam"
             class="project"
             target="blank"
@@ -292,22 +341,6 @@
             <div class="project__description">
               <h3>Corona Map</h3>
               <span>API를 적용하여 만든 맵 웹사이트</span>
-            </div>
-          </a>
-          <a
-            href="https://github.com/Kim-EunKyu/skyShop"
-            class="project"
-            target="blank"
-            data-kindof="front-end"
-          >
-            <img
-              src="imgs/projects/skypia/skypia_mainpage.JPG"
-              alt="Shopping Mall Site"
-              class="project__img"
-            />
-            <div class="project__description">
-              <h3>Skypia with React</h3>
-              <span>React & Express.js를 이용하여 만든 쇼핑물 웹사이트</span>
             </div>
           </a>
         </div>

@@ -112,5 +112,13 @@ function classifyProject(select) {
         project[i].style.display = "none";
       }
     }
+  } else if (select == "mobile-only") {
+    for (let i = 0; i < project.length; i++) {
+      if (project[i].nodeName == "A" && project[i].dataset.kindof == "mobile") {
+        project[i].style.display = "flex";
+      } else {
+        project[i].style.display = "none";
+      }
+    }
   }
 }

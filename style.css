@@ -303,11 +303,13 @@ p {
 .skill__logo {
   display: flex;
   flex-direction: column;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 50px;
 }
 
 .skill__logo img {
-  width: 100px;
-  height: 100px;
+  object-fit: cover;
 }
 
 /* .skill__description {
